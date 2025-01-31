@@ -1,10 +1,18 @@
 import mongoose, { mongo, Mongoose } from "mongoose";
 import express, { Request, Response } from "express";
+import cors from "cors";
 
 const app = express();
 const port = 3000;
 
 app.use(express.json());
+
+// Allow cors usages from these hosts and ports.
+app.use(
+  cors({
+    origin: "http://localhost:4200",
+  })
+);
 
 app.get("/", (request: Request, response: Response, next: () => any) => {
   response.status(200).json({ message: "Server ping response" });
