@@ -19,11 +19,6 @@ const ImageSubSchema: Schema = new Schema({
 });
 
 const MovieSchema: Schema = new Schema({
-  id: {
-    type: mongoose.Schema.Types.ObjectId,
-    required: true,
-    unique: true,
-  },
   title: {
     type: String,
     required: true,

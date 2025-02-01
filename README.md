@@ -1,8 +1,8 @@
 # Launch
 
-`nodemon` does not work on this project.
-Instead relying on
+Main endpoint is `.\src\server.ts`.
+You can use
+`nodemon`
 
+or
 `npx ts-node .\src\server.ts`
-
-For unknown typescript reasons.
