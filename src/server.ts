@@ -1,36 +1,68 @@
 import mongoose, { mongo, Mongoose } from "mongoose";
 import express, { Request, Response } from "express";
 import cors from "cors";
+import MovieModel from "./model/movie.collection";
 
 const app = express();
 const port = 3000;
 
 app.use(express.json());
-
 // Allow cors usages from these hosts and ports.
-app.use(
-  cors({
-    origin: "http://localhost:4200",
-  })
-);
+app.use(cors({ origin: "http://localhost:4200" }));
+
+/**
+ * Mongoose Setup
+ */
+const connectionString: string =
+  "mongodb+srv://SomeUser:SomePassword@SomeServer";
+// const model = mongoose.model();
 
 app.get("/", (request: Request, response: Response, next: () => any) => {
   response.status(200).json({ message: "Server ping response" });
 });
 
 /**
+ * This method should be supplied to all mechanisms which require for authentication.
+ * @param request The request which needs authentication checks
+ * @param response The response
+ * @param next If the check is clear then the next handler will be called.
+ */
+const authenticationMiddleware = (
+  request: Request,
+  response: Response,
+  next: () => any
+) => {
+  // TODO: Increase security
+  if (request.headers.authorization === "Basic SomeUser:SomePassword") {
+    next(); // allows for next request to proceed
+  } else {
+    response.status(401).json({ message: "User authentication failed" });
+  }
+};
+
+/**
  * Responses for Movies
  */
-app.get("/movies", (request: Request, response: Response, next: () => any) => {
-  response.status(200).json({ message: "Movies response" });
+app.get("/movies", async (request: Request, response: Response) => {
+  const movies = await MovieModel.find({}).lean().exec();
+  response.status(200).json(movies);
 });
 
-app.get(
-  "/movies/:id",
+app.post(
+  "/movies/new-movie",
+  authenticationMiddleware,
   (request: Request, response: Response, next: () => any) => {
     response
       .status(200)
-      .json({ message: "Specific movie response", id: request.params.id });
+      .json({ message: `Specific movie response ${request.params.id}` });
+  }
+);
+
+app.get(
+  "/movies/:id",
+  async (request: Request, response: Response, next: () => any) => {
+    const movie = await MovieModel.findById(request.params.id).lean().exec();
+    response.status(200).json(movie);
   }
 );
 
@@ -46,11 +78,10 @@ app.get("/actors", (request: Request, response: Response, next: () => any) => {
  * TODO
  */
 
-// const model = mongoose.model();
-
 const main = async () => {
+  await mongoose.connect(connectionString);
   app.listen(port, () => {
-    console.log("Received request: Request");
+    console.log(`Server listening on port ${port}`);
   });
 };
 
