@@ -96,6 +96,71 @@ app.post(
   }
 );
 
+app.post(
+  "/deinitialize",
+  authenticationMiddleware,
+  async (request: Request, response: Response, next: () => any) => {
+    console.log(`Cleaning up test movies`);
+    Promise.all([
+      ActorModel.deleteMany().exec(),
+      MovieModel.deleteMany().exec(),
+    ]).then(
+      (fulfilled) => {
+        response.status(201).json({ fulfilled });
+        console.log(`Successfully created cleaned test data`);
+      },
+      (rejectionReason) => {
+        response.status(400).json({
+          message: `Failed to clean test data for ${rejectionReason}`,
+        });
+        console.log(`Failed to clean test data for ${rejectionReason}`);
+      }
+    );
+  }
+);
+
+app.post(
+  "/initialize",
+  authenticationMiddleware,
+  (request: Request, response: Response, next: () => any) => {
+    console.log(`Refilling test movies`);
+    const { actors, movies } = request.body;
+
+    // Insert actors first.
+    ActorModel.insertMany(actors).then(
+      (createdActors) => {
+        console.log(`Successfully created refilled test actors`);
+
+        // Map the input movies so that their ids now match the ObjectId of each positional parameter
+        const updatedMovies = movies.map((movie: any) => {
+          movie.cast = movie.cast.map(
+            (_id: any) => createdActors[_id._id - 1]._id
+          );
+          return movie;
+        });
+        MovieModel.insertMany(updatedMovies).then(
+          (createdMovies) => {
+            response.status(201).json({ createdActors, createdMovies });
+            console.log(`Successfully created refilled test movies`);
+          },
+          (rejectionReason) => {
+            response.status(400).json({
+              message: `Failed to refill test movies for ${rejectionReason}`,
+            });
+            console.log(`Failed to refill test movies for ${rejectionReason}`);
+          }
+        );
+      },
+      (rejectionReason) => {
+        response.status(400).json({
+          message: `Failed to refill test actors for ${rejectionReason}`,
+        });
+        console.log(`Failed to refill test actors for ${rejectionReason}`);
+      }
+    );
+  }
+);
+
 app.delete(
   "/movies/:id",
   //authenticationMiddleware,

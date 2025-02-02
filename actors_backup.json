@@ -1,0 +1,1304 @@
+{
+    "actors": [
+        {
+            "id": "1",
+            "name": "Tim Robbins",
+            "dateOfBirth": "1958-10-16",
+            "biography": "Tim Robbins is an American actor known for his roles in classic movies such as The Shawshank Redemption.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTI1OTYxNzAxOF5BMl5BanBnXkFtZTYwNTE5ODI4._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMjAwMzczNzY0OF5BMl5BanBnXkFtZTcwMTk4NzQ5MQ@@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMjAwMzczNzY0OF5BMl5BanBnXkFtZTcwMTk4NzQ5MQ@@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "name": "Morgan Freeman",
+            "dateOfBirth": "1937-06-01",
+            "biography": "Morgan Freeman is an iconic actor with a deep voice, known for roles in films like The Shawshank Redemption and Seven.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTc0MDMyMzI2OF5BMl5BanBnXkFtZTcwMzM2OTk1MQ@@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "hhttps://m.media-amazon.com/images/M/MV5BYzMyNGQzZWEtYmEzMC00NmZhLWFhZTctODEwMmNkMmZjOWNiXkEyXkFqcGc@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "hhttps://m.media-amazon.com/images/M/MV5BYzMyNGQzZWEtYmEzMC00NmZhLWFhZTctODEwMmNkMmZjOWNiXkEyXkFqcGc@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "name": "Marlon Brando",
+            "dateOfBirth": "1924-04-03",
+            "biography": "Marlon Brando was an American actor and film director.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTg3MDYyMDE5OF5BMl5BanBnXkFtZTcwNjgyNTEzNA@@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BZDM1MzM3ZDAtMWUzOS00ODMzLWFlZGMtNDk0ZDMxOWU1NWI0XkEyXkFqcGc@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BZDM1MzM3ZDAtMWUzOS00ODMzLWFlZGMtNDk0ZDMxOWU1NWI0XkEyXkFqcGc@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "name": "Al Pacino",
+            "dateOfBirth": "1940-04-25",
+            "biography": "Al Pacino is an American actor and filmmaker known for roles in Scarface and The Godfather series.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTQzMzg1ODAyNl5BMl5BanBnXkFtZTYwMjAxODQ1._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BZGUzM2QwNzctNGM4OS00MDk4LTg3MmQtODQ2YTc4NjUyYzMyXkEyXkFqcGc@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BZGUzM2QwNzctNGM4OS00MDk4LTg3MmQtODQ2YTc4NjUyYzMyXkEyXkFqcGc@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "name": "Christian Bale",
+            "dateOfBirth": "1974-01-30",
+            "biography": "Christian Bale is an English actor known for his versatility and intensive method acting.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTkxMzk4MjQ4MF5BMl5BanBnXkFtZTcwMzExODQxOA@@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BNmZkYTBmYjItZDQxZi00OWQzLWFlODAtZWFmOTdiNWZlMjg3XkEyXkFqcGc@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BNmZkYTBmYjItZDQxZi00OWQzLWFlODAtZWFmOTdiNWZlMjg3XkEyXkFqcGc@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "6",
+            "name": "Heath Ledger",
+            "dateOfBirth": "1979-04-04",
+            "biography": "Heath Ledger was an Australian actor and music video director.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTI2NTY0NzA4MF5BMl5BanBnXkFtZTYwMjE1MDE0._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTQwMTgzMTkyNl5BMl5BanBnXkFtZTYwNTQyNTk4._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTQwMTgzMTkyNl5BMl5BanBnXkFtZTYwNTQyNTk4._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "7",
+            "name": "John Travolta",
+            "dateOfBirth": "1954-02-18",
+            "biography": "John Travolta is an American actor and singer.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BNWUyNDZiMjItMjQzMy00YmQyLTliOTYtOGRkYzNhZTk5NDBiXkEyXkFqcGc@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BNWUyNDZiMjItMjQzMy00YmQyLTliOTYtOGRkYzNhZTk5NDBiXkEyXkFqcGc@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BNWUyNDZiMjItMjQzMy00YmQyLTliOTYtOGRkYzNhZTk5NDBiXkEyXkFqcGc@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "8",
+            "name": "Uma Thurman",
+            "dateOfBirth": "1970-04-29",
+            "biography": "Uma Thurman is an American actress and model.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMjMxNzk1MTQyMl5BMl5BanBnXkFtZTgwMDIzMDEyMTE@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMDg2YjZlZWUtNDEyNi00NmIwLWI0MmUtMDIyYWJhOWJkYjFhXkEyXkFqcGc@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMDg2YjZlZWUtNDEyNi00NmIwLWI0MmUtMDIyYWJhOWJkYjFhXkEyXkFqcGc@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "9",
+            "name": "Liam Neeson",
+            "dateOfBirth": "1952-06-07",
+            "biography": "Liam Neeson is an actor from Northern Ireland.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMjA1MTQ3NzU1MV5BMl5BanBnXkFtZTgwMDE3Mjg0MzE@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMjA1MTQ3NzU1MV5BMl5BanBnXkFtZTgwMDE3Mjg0MzE@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMjA1MTQ3NzU1MV5BMl5BanBnXkFtZTgwMDE3Mjg0MzE@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "10",
+            "name": "Ralph Fiennes",
+            "dateOfBirth": "1962-12-22",
+            "biography": "Ralph Fiennes is an English actor, film producer, and director.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMzc5MjE1NDgyN15BMl5BanBnXkFtZTcwNzg2ODgwNA@@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMzc5MjE1NDgyN15BMl5BanBnXkFtZTcwNzg2ODgwNA@@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BNWIyMDc0MWMtZWY5Mi00ZjFmLWE1Y2YtNzFmZWVmMGM3YTU4XkEyXkFqcGc@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "11",
+            "name": "Leonardo DiCaprio",
+            "dateOfBirth": "1974-11-11",
+            "biography": "Leonardo DiCaprio is an American actor and film producer.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMjI0MTg3MzI0M15BMl5BanBnXkFtZTcwMzQyODU2Mw@@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMjI0MTg3MzI0M15BMl5BanBnXkFtZTcwMzQyODU2Mw@@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMjI0MTg3MzI0M15BMl5BanBnXkFtZTcwMzQyODU2Mw@@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "12",
+            "name": "Joseph Gordon-Levitt",
+            "dateOfBirth": "1981-02-17",
+            "biography": "Joseph Gordon-Levitt is an American actor and filmmaker.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTY3NTk0NDI3Ml5BMl5BanBnXkFtZTgwNDA3NjY0MjE@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTY3NTk0NDI3Ml5BMl5BanBnXkFtZTgwNDA3NjY0MjE@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTY3NTk0NDI3Ml5BMl5BanBnXkFtZTgwNDA3NjY0MjE@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "13",
+            "name": "Brad Pitt",
+            "dateOfBirth": "1963-12-18",
+            "biography": "Brad Pitt is an American actor and film producer.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMjA1MjE2MTQ2MV5BMl5BanBnXkFtZTcwMjE5MDY0Nw@@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMjA1MjE2MTQ2MV5BMl5BanBnXkFtZTcwMjE5MDY0Nw@@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMjA1MjE2MTQ2MV5BMl5BanBnXkFtZTcwMjE5MDY0Nw@@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "14",
+            "name": "Edward Norton",
+            "dateOfBirth": "1969-08-18",
+            "biography": "Edward Norton is an American actor and filmmaker.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTYwNjQ5MTI1NF5BMl5BanBnXkFtZTcwMzU5MTI2Mw@@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTYwNjQ5MTI1NF5BMl5BanBnXkFtZTcwMzU5MTI2Mw@@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTYwNjQ5MTI1NF5BMl5BanBnXkFtZTcwMzU5MTI2Mw@@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "15",
+            "name": "Tom Hanks",
+            "dateOfBirth": "1956-07-09",
+            "biography": "Tom Hanks is an American actor and filmmaker.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTQ2MjMwNDA3Nl5BMl5BanBnXkFtZTcwMTA2NDY3NQ@@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTQ2MjMwNDA3Nl5BMl5BanBnXkFtZTcwMTA2NDY3NQ@@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTQ2MjMwNDA3Nl5BMl5BanBnXkFtZTcwMTA2NDY3NQ@@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "16",
+            "name": "Robin Wright",
+            "dateOfBirth": "1966-04-08",
+            "biography": "Robin Wright is an American actress and director.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTU0NTc4MzEyOV5BMl5BanBnXkFtZTcwODY0ODkzMQ@@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTU0NTc4MzEyOV5BMl5BanBnXkFtZTcwODY0ODkzMQ@@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTU0NTc4MzEyOV5BMl5BanBnXkFtZTcwODY0ODkzMQ@@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "17",
+            "name": "Keanu Reeves",
+            "dateOfBirth": "1964-09-02",
+            "biography": "Keanu Reeves is a Canadian actor known for his roles in The Matrix and John Wick series.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BNDEzOTdhNDUtY2EyMy00YTNmLWE5MjItZmRjMmQzYTRlMGRkXkEyXkFqcGc@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BNDEzOTdhNDUtY2EyMy00YTNmLWE5MjItZmRjMmQzYTRlMGRkXkEyXkFqcGc@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BNDEzOTdhNDUtY2EyMy00YTNmLWE5MjItZmRjMmQzYTRlMGRkXkEyXkFqcGc@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "18",
+            "name": "Laurence Fishburne",
+            "dateOfBirth": "1961-07-30",
+            "biography": "Laurence Fishburne is an American actor, playwright, producer, screenwriter, and film director.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTc0NjczNDc1MV5BMl5BanBnXkFtZTYwMDU0Mjg1._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTc0NjczNDc1MV5BMl5BanBnXkFtZTYwMDU0Mjg1._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTc0NjczNDc1MV5BMl5BanBnXkFtZTYwMDU0Mjg1._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "19",
+            "name": "Elijah Wood",
+            "dateOfBirth": "1981-01-28",
+            "biography": "Elijah Wood is an American actor and producer known for his role as Frodo Baggins.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTM0NDIxMzQ5OF5BMl5BanBnXkFtZTcwNzAyNTA4Nw@@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTM0NDIxMzQ5OF5BMl5BanBnXkFtZTcwNzAyNTA4Nw@@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTM0NDIxMzQ5OF5BMl5BanBnXkFtZTcwNzAyNTA4Nw@@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "20",
+            "name": "Viggo Mortensen",
+            "dateOfBirth": "1958-10-20",
+            "biography": "Viggo Mortensen is an American actor, author, musician, photographer, poet, and painter.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BNDQzOTg4NzA2Nl5BMl5BanBnXkFtZTcwMzkwNjkxMg@@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BNDQzOTg4NzA2Nl5BMl5BanBnXkFtZTcwMzkwNjkxMg@@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BNDQzOTg4NzA2Nl5BMl5BanBnXkFtZTcwMzkwNjkxMg@@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "21",
+            "name": "Russell Crowe",
+            "dateOfBirth": "1964-04-07",
+            "biography": "Russell Crowe is a New Zealand actor known for his roles in Gladiator and A Beautiful Mind.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTQyMTExNTMxOF5BMl5BanBnXkFtZTcwNDg1NzkzNw@@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTQyMTExNTMxOF5BMl5BanBnXkFtZTcwNDg1NzkzNw@@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTQyMTExNTMxOF5BMl5BanBnXkFtZTcwNDg1NzkzNw@@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "22",
+            "name": "Joaquin Phoenix",
+            "dateOfBirth": "1974-10-28",
+            "biography": "Joaquin Phoenix is an American actor and producer known for his intense performances.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BYjFjNGYzYjEtNGE0Ny00M2IyLTk5ZmYtODE3ZGFkMzVjYmNmXkEyXkFqcGc@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BYjFjNGYzYjEtNGE0Ny00M2IyLTk5ZmYtODE3ZGFkMzVjYmNmXkEyXkFqcGc@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BYjFjNGYzYjEtNGE0Ny00M2IyLTk5ZmYtODE3ZGFkMzVjYmNmXkEyXkFqcGc@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "23",
+            "name": "Matthew McConaughey",
+            "dateOfBirth": "1969-11-04",
+            "biography": "Matthew McConaughey is an American actor and producer known for his role in Interstellar.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTg0MDc3ODUwOV5BMl5BanBnXkFtZTcwMTk2NjY4Nw@@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTg0MDc3ODUwOV5BMl5BanBnXkFtZTcwMTk2NjY4Nw@@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTg0MDc3ODUwOV5BMl5BanBnXkFtZTcwMTk2NjY4Nw@@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "24",
+            "name": "Anne Hathaway",
+            "dateOfBirth": "1982-11-12",
+            "biography": "Anne Hathaway is an American actress known for her versatility and dynamic roles.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BNzA0MWI3ZDgtMDVkZS00NTVhLTkwMzQtNmNlODk5MDYzMzFmXkEyXkFqcGc@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BNzA0MWI3ZDgtMDVkZS00NTVhLTkwMzQtNmNlODk5MDYzMzFmXkEyXkFqcGc@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BNzA0MWI3ZDgtMDVkZS00NTVhLTkwMzQtNmNlODk5MDYzMzFmXkEyXkFqcGc@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "25",
+            "name": "Mel Gibson",
+            "dateOfBirth": "1956-01-03",
+            "biography": "Mel Gibson is an American actor and filmmaker known for directing and starring in Braveheart.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BNTUzOTMwNTM0OV5BMl5BanBnXkFtZTcwNDQwMTUxMw@@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BNTUzOTMwNTM0OV5BMl5BanBnXkFtZTcwNDQwMTUxMw@@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BNTUzOTMwNTM0OV5BMl5BanBnXkFtZTcwNDQwMTUxMw@@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "26",
+            "name": "Sophie Marceau",
+            "dateOfBirth": "1966-11-17",
+            "biography": "Sophie Marceau is a French actress known for her role in Braveheart.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTc5NjA5OTk4Ml5BMl5BanBnXkFtZTYwNzkyNzYz._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTc5NjA5OTk4Ml5BMl5BanBnXkFtZTYwNzkyNzYz._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTc5NjA5OTk4Ml5BMl5BanBnXkFtZTYwNzkyNzYz._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "27",
+            "name": "Michael Clarke Duncan",
+            "dateOfBirth": "1957-12-10",
+            "biography": "Michael Clarke Duncan was an American actor, best known for his breakout role in The Green Mile.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTI3NDY2ODk5OV5BMl5BanBnXkFtZTYwMjQ0NzE0._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTI3NDY2ODk5OV5BMl5BanBnXkFtZTYwMjQ0NzE0._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTI3NDY2ODk5OV5BMl5BanBnXkFtZTYwMjQ0NzE0._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "28",
+            "name": "Jodie Foster",
+            "dateOfBirth": "1962-11-19",
+            "biography": "Jodie Foster is an American actress and filmmaker, known for her role as Clarice Starling in The Silence of the Lambs.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTM3MjgyOTQwNF5BMl5BanBnXkFtZTcwMDczMzEwNA@@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTM3MjgyOTQwNF5BMl5BanBnXkFtZTcwMDczMzEwNA@@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTM3MjgyOTQwNF5BMl5BanBnXkFtZTcwMDczMzEwNA@@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "29",
+            "name": "Anthony Hopkins",
+            "dateOfBirth": "1937-12-31",
+            "biography": "Sir Anthony Hopkins is a Welsh actor known for his role as Hannibal Lecter in The Silence of the Lambs.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTg5ODk1NTc5Ml5BMl5BanBnXkFtZTYwMjAwOTI4._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTg5ODk1NTc5Ml5BMl5BanBnXkFtZTYwMjAwOTI4._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTg5ODk1NTc5Ml5BMl5BanBnXkFtZTYwMjAwOTI4._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "30",
+            "name": "Hugh Jackman",
+            "dateOfBirth": "1968-10-12",
+            "biography": "Hugh Jackman is an Australian actor known for his roles in The Prestige and X-Men series.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BNDExMzIzNjk3Nl5BMl5BanBnXkFtZTcwOTE4NDU5OA@@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BNDExMzIzNjk3Nl5BMl5BanBnXkFtZTcwOTE4NDU5OA@@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BNDExMzIzNjk3Nl5BMl5BanBnXkFtZTcwOTE4NDU5OA@@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "31",
+            "name": "Jamie Foxx",
+            "dateOfBirth": "1967-12-13",
+            "biography": "Jamie Foxx is an American actor, comedian, and singer, known for his leading role in Django Unchained.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTkyNjY1NDg3NF5BMl5BanBnXkFtZTgwNjA2MTg0MzE@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTkyNjY1NDg3NF5BMl5BanBnXkFtZTgwNjA2MTg0MzE@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTkyNjY1NDg3NF5BMl5BanBnXkFtZTgwNjA2MTg0MzE@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "32",
+            "name": "Christoph Waltz",
+            "dateOfBirth": "1956-10-04",
+            "biography": "Christoph Waltz is an Austrian actor known for his roles in Quentin Tarantino's films.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTM4MDk3OTYxOF5BMl5BanBnXkFtZTcwMDk5OTUwOQ@@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTM4MDk3OTYxOF5BMl5BanBnXkFtZTcwMDk5OTUwOQ@@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTM4MDk3OTYxOF5BMl5BanBnXkFtZTcwMDk5OTUwOQ@@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "33",
+            "name": "Matt Damon",
+            "dateOfBirth": "1970-10-08",
+            "biography": "Matt Damon is an American actor and filmmaker known for his role in The Departed.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTM0NzYzNDgxMl5BMl5BanBnXkFtZTcwMDg2MTMyMw@@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTM0NzYzNDgxMl5BMl5BanBnXkFtZTcwMDg2MTMyMw@@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTM0NzYzNDgxMl5BMl5BanBnXkFtZTcwMDg2MTMyMw@@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "34",
+            "name": "Miles Teller",
+            "dateOfBirth": "1987-02-20",
+            "biography": "Miles Teller is an American actor known for his role in Whiplash.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BNWI3YWY1NWQtNDVhMy00ZWE1LWI2MzUtOTczNTg5MTllZmNjXkEyXkFqcGc@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BNWI3YWY1NWQtNDVhMy00ZWE1LWI2MzUtOTczNTg5MTllZmNjXkEyXkFqcGc@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BNWI3YWY1NWQtNDVhMy00ZWE1LWI2MzUtOTczNTg5MTllZmNjXkEyXkFqcGc@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "35",
+            "name": "J.K. Simmons",
+            "dateOfBirth": "1955-01-09",
+            "biography": "J.K. Simmons is an American actor, recognized for his Oscar-winning role in Whiplash.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTYwNjUxMTYzM15BMl5BanBnXkFtZTYwNjgwMjY3._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTYwNjUxMTYzM15BMl5BanBnXkFtZTYwNjgwMjY3._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTYwNjUxMTYzM15BMl5BanBnXkFtZTYwNjgwMjY3._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "36",
+            "name": "Tony Revolori",
+            "dateOfBirth": "1996-04-28",
+            "biography": "Tony Revolori is an American actor known for his role in The Grand Budapest Hotel.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTY0NTI5MjE3MF5BMl5BanBnXkFtZTgwMDQ0Mzk4MDE@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTY0NTI5MjE3MF5BMl5BanBnXkFtZTgwMDQ0Mzk4MDE@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTY0NTI5MjE3MF5BMl5BanBnXkFtZTgwMDQ0Mzk4MDE@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "37",
+            "name": "Song Kang-ho",
+            "dateOfBirth": "1967-01-17",
+            "biography": "Song Kang-ho is a South Korean actor known for his role in Parasite.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BYmI2OTQwMmItMDI5OS00OGQxLWIyZGUtNThlNjRjODkwMTI1XkEyXkFqcGc@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BYmI2OTQwMmItMDI5OS00OGQxLWIyZGUtNThlNjRjODkwMTI1XkEyXkFqcGc@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BYmI2OTQwMmItMDI5OS00OGQxLWIyZGUtNThlNjRjODkwMTI1XkEyXkFqcGc@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "38",
+            "name": "Choi Woo-sik",
+            "dateOfBirth": "1990-03-26",
+            "biography": "Choi Woo-sik is a South Korean actor known for his performance in Parasite.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTkwOTQ4OTg0OV5BMl5BanBnXkFtZTgwMzQyOTM0OTE@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTkwOTQ4OTg0OV5BMl5BanBnXkFtZTgwMzQyOTM0OTE@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTkwOTQ4OTg0OV5BMl5BanBnXkFtZTgwMzQyOTM0OTE@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "39",
+            "name": "Tom Hardy",
+            "dateOfBirth": "1977-09-15",
+            "biography": "Tom Hardy is an English actor known for his role as Max Rockatansky in Mad Max: Fury Road.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTQ3ODEyNjA4Nl5BMl5BanBnXkFtZTgwMTE4ODMyMjE@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTQ3ODEyNjA4Nl5BMl5BanBnXkFtZTgwMTE4ODMyMjE@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTQ3ODEyNjA4Nl5BMl5BanBnXkFtZTgwMTE4ODMyMjE@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "40",
+            "name": "Charlize Theron",
+            "dateOfBirth": "1975-08-07",
+            "biography": "Charlize Theron is a South African-American actress known for her role as Furiosa in Mad Max: Fury Road.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTk5Mzc4ODU0Ml5BMl5BanBnXkFtZTcwNjU1NTI0Mw@@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTk5Mzc4ODU0Ml5BMl5BanBnXkFtZTcwNjU1NTI0Mw@@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTk5Mzc4ODU0Ml5BMl5BanBnXkFtZTcwNjU1NTI0Mw@@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "41",
+            "name": "Ryan Gosling",
+            "dateOfBirth": "1980-11-12",
+            "biography": "Ryan Gosling is a Canadian actor known for his role in Blade Runner 2049.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTQzMjkwNTQ2OF5BMl5BanBnXkFtZTgwNTQ4MTQ4MTE@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTQzMjkwNTQ2OF5BMl5BanBnXkFtZTgwNTQ4MTQ4MTE@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTQzMjkwNTQ2OF5BMl5BanBnXkFtZTgwNTQ4MTQ4MTE@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "42",
+            "name": "Harrison Ford",
+            "dateOfBirth": "1942-07-13",
+            "biography": "Harrison Ford is an American actor known for his iconic roles in Blade Runner and Star Wars.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTY4Mjg0NjIxOV5BMl5BanBnXkFtZTcwMTM2NTI3MQ@@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTY4Mjg0NjIxOV5BMl5BanBnXkFtZTcwMTM2NTI3MQ@@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTY4Mjg0NjIxOV5BMl5BanBnXkFtZTcwMTM2NTI3MQ@@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "43",
+            "name": "Robert De Niro",
+            "dateOfBirth": "1943-08-17",
+            "biography": "Robert De Niro is an American actor and producer, known for his extensive filmography, including his role in Joker.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMjAwNDU3MzcyOV5BMl5BanBnXkFtZTcwMjc0MTIxMw@@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMjAwNDU3MzcyOV5BMl5BanBnXkFtZTcwMjc0MTIxMw@@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMjAwNDU3MzcyOV5BMl5BanBnXkFtZTcwMjc0MTIxMw@@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "44",
+            "name": "Jesse Eisenberg",
+            "dateOfBirth": "1983-10-05",
+            "biography": "Jesse Eisenberg is an American actor known for his role as Mark Zuckerberg in The Social Network.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BNTE3MzQzODE3OV5BMl5BanBnXkFtZTcwMDE0ODY1NA@@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BNTE3MzQzODE3OV5BMl5BanBnXkFtZTcwMDE0ODY1NA@@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BNTE3MzQzODE3OV5BMl5BanBnXkFtZTcwMDE0ODY1NA@@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "45",
+            "name": "Andrew Garfield",
+            "dateOfBirth": "1983-08-20",
+            "biography": "Andrew Garfield is an English-American actor known for his performance in The Social Network.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMjE2MjI2OTk1OV5BMl5BanBnXkFtZTgwNTY1NzM4MDI@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMjE2MjI2OTk1OV5BMl5BanBnXkFtZTgwNTY1NzM4MDI@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMjE2MjI2OTk1OV5BMl5BanBnXkFtZTgwNTY1NzM4MDI@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "46",
+            "name": "Dev Patel",
+            "dateOfBirth": "1990-04-23",
+            "biography": "Dev Patel is a British actor known for his breakout role in Slumdog Millionaire.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMjgxMjQwNDc5Nl5BMl5BanBnXkFtZTgwODI5Njk2NDE@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMjgxMjQwNDc5Nl5BMl5BanBnXkFtZTgwODI5Njk2NDE@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMjgxMjQwNDc5Nl5BMl5BanBnXkFtZTgwODI5Njk2NDE@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "47",
+            "name": "Freida Pinto",
+            "dateOfBirth": "1984-10-18",
+            "biography": "Freida Pinto is an Indian actress known for her role in Slumdog Millionaire.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTg5OTM5Njg4MV5BMl5BanBnXkFtZTcwNTk4NjAwMg@@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTg5OTM5Njg4MV5BMl5BanBnXkFtZTcwNTk4NjAwMg@@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTg5OTM5Njg4MV5BMl5BanBnXkFtZTcwNTk4NjAwMg@@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "48",
+            "name": "Jonah Hill",
+            "dateOfBirth": "1983-12-20",
+            "biography": "Jonah Hill is an American actor and filmmaker known for his role in The Wolf of Wall Street.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTUyNDU0NzAwNl5BMl5BanBnXkFtZTcwMzQxMzIzNw@@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTUyNDU0NzAwNl5BMl5BanBnXkFtZTcwMzQxMzIzNw@@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTUyNDU0NzAwNl5BMl5BanBnXkFtZTcwMzQxMzIzNw@@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "49",
+            "name": "Emma Stone",
+            "dateOfBirth": "1988-11-06",
+            "biography": "Emma Stone is an American actress known for her Academy Award-winning performance in La La Land.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMjI4NjM1NDkyN15BMl5BanBnXkFtZTgwODgyNTY1MjE@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMjI4NjM1NDkyN15BMl5BanBnXkFtZTgwODgyNTY1MjE@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMjI4NjM1NDkyN15BMl5BanBnXkFtZTgwODgyNTY1MjE@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "50",
+            "name": "Trevante Rhodes",
+            "dateOfBirth": "1990-02-10",
+            "biography": "Trevante Rhodes is an American actor known for his lead role in Moonlight.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMzAwNDEyNTc3MV5BMl5BanBnXkFtZTgwNTEzMzc1MTI@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMzAwNDEyNTc3MV5BMl5BanBnXkFtZTgwNTEzMzc1MTI@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMzAwNDEyNTc3MV5BMl5BanBnXkFtZTgwNTEzMzc1MTI@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "51",
+            "name": "Mahershala Ali",
+            "dateOfBirth": "1974-02-16",
+            "biography": "Mahershala Ali is an American actor known for his Oscar-winning performance in Moonlight.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMzBhZTM4ZTMtYzYwMi00ZGQwLTljNDEtZTVlNjYwYTZiODEzXkEyXkFqcGc@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMzBhZTM4ZTMtYzYwMi00ZGQwLTljNDEtZTVlNjYwYTZiODEzXkEyXkFqcGc@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMzBhZTM4ZTMtYzYwMi00ZGQwLTljNDEtZTVlNjYwYTZiODEzXkEyXkFqcGc@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "52",
+            "name": "Chadwick Boseman",
+            "dateOfBirth": "1976-11-29",
+            "biography": "Chadwick Boseman was an American actor known for his iconic role as T'Challa in Black Panther.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTk2OTY5MzcwMV5BMl5BanBnXkFtZTgwODM4MDI5MjI@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTk2OTY5MzcwMV5BMl5BanBnXkFtZTgwODM4MDI5MjI@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTk2OTY5MzcwMV5BMl5BanBnXkFtZTgwODM4MDI5MjI@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "53",
+            "name": "Michael B. Jordan",
+            "dateOfBirth": "1987-02-09",
+            "biography": "Michael B. Jordan is an American actor known for his role as Erik Killmonger in Black Panther.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMjExOTY3NzExM15BMl5BanBnXkFtZTgwOTg1OTAzMTE@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMjExOTY3NzExM15BMl5BanBnXkFtZTgwOTg1OTAzMTE@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMjExOTY3NzExM15BMl5BanBnXkFtZTgwOTg1OTAzMTE@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "54",
+            "name": "Bradley Cooper",
+            "dateOfBirth": "1975-01-05",
+            "biography": "Bradley Cooper is an American actor and filmmaker known for his role and direction in A Star Is Born.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BY2YwYjg4NjItZGFjNC00NzgzLWJhMTktYTZmODlmM2Y4ODJjXkEyXkFqcGc@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BY2YwYjg4NjItZGFjNC00NzgzLWJhMTktYTZmODlmM2Y4ODJjXkEyXkFqcGc@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BY2YwYjg4NjItZGFjNC00NzgzLWJhMTktYTZmODlmM2Y4ODJjXkEyXkFqcGc@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "55",
+            "name": "Lady Gaga",
+            "dateOfBirth": "1986-03-28",
+            "biography": "Lady Gaga is an American singer, songwriter, and actress known for her acclaimed role in A Star Is Born.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTg1NjQwMzU4MF5BMl5BanBnXkFtZTgwNTk5NjQ4NjE@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTg1NjQwMzU4MF5BMl5BanBnXkFtZTgwNTk5NjQ4NjE@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTg1NjQwMzU4MF5BMl5BanBnXkFtZTgwNTk5NjQ4NjE@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "56",
+            "name": "George MacKay",
+            "dateOfBirth": "1992-03-13",
+            "biography": "George MacKay is an English actor known for his leading role in 1917.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTQ4NjQ0NTEwOV5BMl5BanBnXkFtZTgwODQyMzIyMTI@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTQ4NjQ0NTEwOV5BMl5BanBnXkFtZTgwODQyMzIyMTI@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTQ4NjQ0NTEwOV5BMl5BanBnXkFtZTgwODQyMzIyMTI@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "57",
+            "name": "Dean-Charles Chapman",
+            "dateOfBirth": "1997-09-07",
+            "biography": "Dean-Charles Chapman is an English actor known for his role in 1917.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BNzM2Mjc2NzAzMV5BMl5BanBnXkFtZTgwMjE0MzAwNTE@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BNzM2Mjc2NzAzMV5BMl5BanBnXkFtZTgwMjE0MzAwNTE@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BNzM2Mjc2NzAzMV5BMl5BanBnXkFtZTgwMjE0MzAwNTE@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "58",
+            "name": "Rami Malek",
+            "dateOfBirth": "1981-05-12",
+            "biography": "Rami Malek is an American actor known for his Academy Award-winning role as Freddie Mercury in Bohemian Rhapsody.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BODA3OTM4ODU0MV5BMl5BanBnXkFtZTgwNjQ5Njg3NjM@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTgwODczMzg4MV5BMl5BanBnXkFtZTgwMTQyMzQ1NzE@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTgwODczMzg4MV5BMl5BanBnXkFtZTgwMTQyMzQ1NzE@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "59",
+            "name": "Gwilym Lee",
+            "dateOfBirth": "1983-11-24",
+            "biography": "Gwilym Lee is a British actor known for his portrayal of Brian May in Bohemian Rhapsody.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BM2Y0NGI2ODctMTc1Mi00ZTM4LTg1YmUtZmY0OTk1ZDcwMjhiXkEyXkFqcGc@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMjE3MjQ5ODc2Nl5BMl5BanBnXkFtZTgwNjA2OTYzNjM@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMjE3MjQ5ODc2Nl5BMl5BanBnXkFtZTgwNjA2OTYzNjM@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "60",
+            "name": "Taron Egerton",
+            "dateOfBirth": "1989-11-10",
+            "biography": "Taron Egerton is a Welsh actor known for his acclaimed portrayal of Elton John in Rocketman.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMGRmZTVmMTEtOGY5Yy00NTQ4LThjYmItYmQxYzlhMmY1YWZjXkEyXkFqcGc@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMGRmZTVmMTEtOGY5Yy00NTQ4LThjYmItYmQxYzlhMmY1YWZjXkEyXkFqcGc@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMGRmZTVmMTEtOGY5Yy00NTQ4LThjYmItYmQxYzlhMmY1YWZjXkEyXkFqcGc@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "61",
+            "name": "Jamie Bell",
+            "dateOfBirth": "1986-03-14",
+            "biography": "Jamie Bell is an English actor known for his role as Bernie Taupin in Rocketman.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMzMyNjU5N2YtNDg5NC00YTMwLThiOTItMjEwYmQzM2Y3MGYwXkEyXkFqcGc@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BZDBlMjk1NWMtNTBjMy00M2IzLTgxYTYtMTQwNjc3MmI4Y2E2XkEyXkFqcGc@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BZDBlMjk1NWMtNTBjMy00M2IzLTgxYTYtMTQwNjc3MmI4Y2E2XkEyXkFqcGc@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "62",
+            "name": "Eddie Redmayne",
+            "dateOfBirth": "1982-01-06",
+            "biography": "Eddie Redmayne is a British actor who won an Academy Award for his role as Stephen Hawking in The Theory of Everything.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTU0MjEyNzQyM15BMl5BanBnXkFtZTcwMTc4ODUxOQ@@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BNjI4NjI5OTQ4Nl5BMl5BanBnXkFtZTcwOTI1MjU1MQ@@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BNjI4NjI5OTQ4Nl5BMl5BanBnXkFtZTcwOTI1MjU1MQ@@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "63",
+            "name": "Felicity Jones",
+            "dateOfBirth": "1983-10-17",
+            "biography": "Felicity Jones is a British actress known for her role as Jane Hawking in The Theory of Everything.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMjA0MTIwMzIyN15BMl5BanBnXkFtZTgwNDEyMzg1NDE@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMjA0MTIwMzIyN15BMl5BanBnXkFtZTgwNDEyMzg1NDE@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMjA0MTIwMzIyN15BMl5BanBnXkFtZTgwNDEyMzg1NDE@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "64",
+            "name": "Chiwetel Ejiofor",
+            "dateOfBirth": "1977-07-10",
+            "biography": "Chiwetel Ejiofor is a British actor known for his Academy Award-nominated role in 12 Years a Slave.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BNzA5MDEyMTY3Nl5BMl5BanBnXkFtZTgwODQ0MjcxMDE@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMGRkZDY5NzctOGQ1Zi00OTdlLWIwN2UtMTM4MDFjZGVmNjlhXkEyXkFqcGc@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMGRkZDY5NzctOGQ1Zi00OTdlLWIwN2UtMTM4MDFjZGVmNjlhXkEyXkFqcGc@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        },
+        {
+            "id": "65",
+            "name": "Lupita Nyong'o",
+            "dateOfBirth": "1983-03-01",
+            "biography": "Lupita Nyong'o is a Kenyan-Mexican actress known for her Oscar-winning performance in 12 Years a Slave.",
+            "images": [
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BMTY0NTQ4MDY2Nl5BMl5BanBnXkFtZTgwNDk1MTEyMDE@._V1_.jpg",
+                    "isCover": true
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BOTAzODEzNDAzMl5BMl5BanBnXkFtZTgwMDU1MTgzNzE@._V1_.jpg",
+                    "isCover": false
+                },
+                {
+                    "url": "https://m.media-amazon.com/images/M/MV5BOTAzODEzNDAzMl5BMl5BanBnXkFtZTgwMDU1MTgzNzE@._V1_.jpg",
+                    "isCover": false
+                }
+            ]
+        }
+    ]
+}
