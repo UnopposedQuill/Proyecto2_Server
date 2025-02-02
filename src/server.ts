@@ -42,7 +42,7 @@ const authenticationMiddleware = (
 app.get("/movies", async (request: Request, response: Response) => {
   console.log("Request for all movies received");
   try {
-    const movies = await MovieModel.find({}).populate("cast").exec();
+    const movies = await MovieModel.find({}).lean().exec();
     response.status(200).json(movies);
     console.log(
       `Request for all movies processed. Returned ${movies.length} elements`
@@ -91,71 +91,6 @@ app.post(
         console.log(
           `Failed to create new movie ${request.body["title"]} for ${rejectionReason}`
         );
-      }
-    );
-  }
-);
-
-app.post(
-  "/deinitialize",
-  authenticationMiddleware,
-  async (request: Request, response: Response, next: () => any) => {
-    console.log(`Cleaning up test movies`);
-    Promise.all([
-      ActorModel.deleteMany().exec(),
-      MovieModel.deleteMany().exec(),
-    ]).then(
-      (fulfilled) => {
-        response.status(201).json({ fulfilled });
-        console.log(`Successfully created cleaned test data`);
-      },
-      (rejectionReason) => {
-        response.status(400).json({
-          message: `Failed to clean test data for ${rejectionReason}`,
-        });
-        console.log(`Failed to clean test data for ${rejectionReason}`);
-      }
-    );
-  }
-);
-
-app.post(
-  "/initialize",
-  authenticationMiddleware,
-  (request: Request, response: Response, next: () => any) => {
-    console.log(`Refilling test movies`);
-    const { actors, movies } = request.body;
-
-    // Insert actors first.
-    ActorModel.insertMany(actors).then(
-      (createdActors) => {
-        console.log(`Successfully created refilled test actors`);
-
-        // Map the input movies so that their ids now match the ObjectId of each positional parameter
-        const updatedMovies = movies.map((movie: any) => {
-          movie.cast = movie.cast.map(
-            (_id: any) => createdActors[_id._id - 1]._id
-          );
-          return movie;
-        });
-        MovieModel.insertMany(updatedMovies).then(
-          (createdMovies) => {
-            response.status(201).json({ createdActors, createdMovies });
-            console.log(`Successfully created refilled test movies`);
-          },
-          (rejectionReason) => {
-            response.status(400).json({
-              message: `Failed to refill test movies for ${rejectionReason}`,
-            });
-            console.log(`Failed to refill test movies for ${rejectionReason}`);
-          }
-        );
-      },
-      (rejectionReason) => {
-        response.status(400).json({
-          message: `Failed to refill test actors for ${rejectionReason}`,
-        });
-        console.log(`Failed to refill test actors for ${rejectionReason}`);
       }
     );
   }
@@ -252,8 +187,31 @@ app.get("/actors", async (request: Request, response: Response) => {
 app.get(
   "/actors/:id",
   async (request: Request, response: Response, next: () => any) => {
-    const actor = await ActorModel.findById(request.params.id).lean().exec();
-    response.status(200).json(actor);
+    console.log("Request for actor id received");
+    const actorId = request.params.id;
+
+    // Check if the ID is valid
+    if (!mongoose.Types.ObjectId.isValid(actorId)) {
+      response.status(400).json({ message: "Invalid actor ID" });
+      console.log(`Request for actor id: ${actorId} had an invalid actor ID`);
+      return;
+    }
+
+    const actor = await ActorModel.findById(actorId).lean().exec();
+    if (actor) {
+      const actorMovies =
+        (await MovieModel.find({ cast: { $all: actor?._id } })
+          .lean()
+          .exec()) ?? [];
+      actor.movies = actorMovies;
+      response.status(200).json(actor);
+      console.log(
+        `Request for actor id: ${actorId} was returned and found ${actorMovies.length} movies`
+      );
+    } else {
+      response.status(404).json({ message: "Actor ID was not found" });
+      console.log(`Request for actor id: ${actorId} did not yield any results`);
+    }
   }
 );
 
@@ -320,10 +278,116 @@ app.delete(
   }
 );
 
+app.patch(
+  "/actors/:id",
+  //authenticationMiddleware,
+  async (request: Request, response: Response, next: () => any) => {
+    try {
+      const actorId = request.params.id;
+      const updates = request.body; // Partial updates from the request body
+
+      // Check if the ID is valid
+      if (!mongoose.Types.ObjectId.isValid(actorId)) {
+        response.status(400).json({ message: "Invalid actor ID" });
+        return;
+      }
+
+      // Find the movie by ID and apply the updates
+      const updatedActor = await ActorModel.findByIdAndUpdate(
+        actorId,
+        updates,
+        {
+          new: true, // Return the updated document
+          runValidators: true, // Run schema validators on the update
+        }
+      );
+
+      if (!updatedActor) {
+        response.status(404).json({ message: "Movie not found" });
+        return;
+      }
+
+      response.status(200).json(updatedActor);
+    } catch (err: any) {
+      response
+        .status(500)
+        .json({ message: "Server error", error: err.message });
+    }
+  }
+);
+
 /**
  * Responses for Users
  * TODO
  */
+
+/**
+ * Administrative Initialization and Cleanup
+ */
+app.post(
+  "/deinitialize",
+  authenticationMiddleware,
+  async (request: Request, response: Response, next: () => any) => {
+    console.log(`Cleaning up test movies`);
+    Promise.all([
+      ActorModel.deleteMany().exec(),
+      MovieModel.deleteMany().exec(),
+    ]).then(
+      (fulfilled) => {
+        response.status(201).json({ fulfilled });
+        console.log(`Successfully created cleaned test data`);
+      },
+      (rejectionReason) => {
+        response.status(400).json({
+          message: `Failed to clean test data for ${rejectionReason}`,
+        });
+        console.log(`Failed to clean test data for ${rejectionReason}`);
+      }
+    );
+  }
+);
+
+app.post(
+  "/initialize",
+  authenticationMiddleware,
+  (request: Request, response: Response, next: () => any) => {
+    console.log(`Refilling test movies`);
+    const { actors, movies } = request.body;
+
+    // Insert actors first.
+    ActorModel.insertMany(actors).then(
+      (createdActors) => {
+        console.log(`Successfully created refilled test actors`);
+
+        // Map the input movies so that their ids now match the ObjectId of each positional parameter
+        const updatedMovies = movies.map((movie: any) => {
+          movie.cast = movie.cast.map(
+            (_id: any) => createdActors[_id._id - 1]._id
+          );
+          return movie;
+        });
+        MovieModel.insertMany(updatedMovies).then(
+          (createdMovies) => {
+            response.status(201).json({ createdActors, createdMovies });
+            console.log(`Successfully created refilled test movies`);
+          },
+          (rejectionReason) => {
+            response.status(400).json({
+              message: `Failed to refill test movies for ${rejectionReason}`,
+            });
+            console.log(`Failed to refill test movies for ${rejectionReason}`);
+          }
+        );
+      },
+      (rejectionReason) => {
+        response.status(400).json({
+          message: `Failed to refill test actors for ${rejectionReason}`,
+        });
+        console.log(`Failed to refill test actors for ${rejectionReason}`);
+      }
+    );
+  }
+);
 
 const main = async () => {
   dotenv.config();
