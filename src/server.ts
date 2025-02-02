@@ -41,22 +41,33 @@ const authenticationMiddleware = (
  */
 app.get("/movies", async (request: Request, response: Response) => {
   console.log("Request for all movies received");
-  // TODO: Embed actors information
   try {
     const movies = await MovieModel.find({}).populate("cast").exec();
     response.status(200).json(movies);
-    console.log(`Request for all movies processed. Returned ${movies.length}`);
+    console.log(
+      `Request for all movies processed. Returned ${movies.length} elements`
+    );
   } catch (error) {
     response.status(500).json(`Could not process the request: ${error}`);
     console.log(`Failed request. ${error}`);
   }
 });
 
+app.get(
+  "/movies/:id",
+  async (request: Request, response: Response, next: () => any) => {
+    const movie = await MovieModel.findById(request.params.id)
+      .populate("cast")
+      .exec();
+    response.status(200).json(movie);
+  }
+);
+
 app.post(
   "/movies",
   //authenticationMiddleware,
   (request: Request, response: Response, next: () => any) => {
-    console.log(`Creating new movie ${request.body["title"]}`);
+    console.log(`Creating new movie titled: ${request.body["title"]}`);
     const newMovie = MovieModel.create({
       title: request.body["title"],
       description: request.body["description"],
@@ -117,23 +128,132 @@ app.delete(
   }
 );
 
-app.get(
+app.patch(
   "/movies/:id",
+  //authenticationMiddleware,
   async (request: Request, response: Response, next: () => any) => {
-    // TODO: Embed actors information
-    const movie = await MovieModel.findById(request.params.id)
-      .populate("cast")
-      .exec();
-    response.status(200).json(movie);
+    try {
+      const movieId = request.params.id;
+      const updates = request.body; // Partial updates from the request body
+
+      // Check if the ID is valid
+      if (!mongoose.Types.ObjectId.isValid(movieId)) {
+        response.status(400).json({ message: "Invalid movie ID" });
+        return;
+      }
+
+      // Find the movie by ID and apply the updates
+      const updatedMovie = await MovieModel.findByIdAndUpdate(
+        movieId,
+        updates,
+        {
+          new: true, // Return the updated document
+          runValidators: true, // Run schema validators on the update
+        }
+      );
+
+      if (!updatedMovie) {
+        response.status(404).json({ message: "Movie not found" });
+        return;
+      }
+
+      response.status(200).json(updatedMovie);
+    } catch (err: any) {
+      response
+        .status(500)
+        .json({ message: "Server error", error: err.message });
+    }
   }
 );
 
 /**
  * Responses for Actors
  */
-app.get("/actors", (request: Request, response: Response, next: () => any) => {
-  response.status(200).json({ message: "Actors response" });
+app.get("/actors", async (request: Request, response: Response) => {
+  console.log("Request for all actors received");
+  try {
+    const actors = await ActorModel.find({}).lean().exec();
+    response.status(200).json(actors);
+    console.log(
+      `Request for all actors processed. Returned ${actors.length} elements`
+    );
+  } catch (error) {
+    response.status(500).json(`Could not process the request: ${error}`);
+    console.log(`Failed request. ${error}`);
+  }
 });
+
+// TODO: Add Movies information
+app.get(
+  "/actors/:id",
+  async (request: Request, response: Response, next: () => any) => {
+    const actor = await ActorModel.findById(request.params.id).lean().exec();
+    response.status(200).json(actor);
+  }
+);
+
+app.post(
+  "/actors",
+  //authenticationMiddleware,
+  (request: Request, response: Response, next: () => any) => {
+    console.log(`Creating new actor named: ${request.body["name"]}`);
+    const newActor = ActorModel.create({
+      name: request.body["name"],
+      dateOfBirth: request.body["dateOfBirth"],
+      biography: request.body["biography"],
+      images: request.body["images"],
+    });
+
+    newActor.then(
+      (created) => {
+        response.status(201).json(created);
+        console.log(
+          `Successfully created new actor with the name ${request.body["name"]}`
+        );
+      },
+      (rejectionReason) => {
+        response.status(400).json({
+          message: `Failed to create new movie ${request.body["name"]} for ${rejectionReason}`,
+        });
+        console.log(
+          `Failed to create new movie ${request.body["name"]} for ${rejectionReason}`
+        );
+      }
+    );
+  }
+);
+
+app.delete(
+  "/actors/:id",
+  //authenticationMiddleware,
+  async (request: Request, response: Response, next: () => any) => {
+    try {
+      const actorId = request.params.id;
+
+      // Check if the ID is valid
+      if (!mongoose.Types.ObjectId.isValid(actorId)) {
+        response.status(400).json({ message: "Invalid actor ID" });
+        return;
+      }
+
+      // Find and delete the actor
+      const deletedActor = await ActorModel.findByIdAndDelete(actorId);
+
+      if (!deletedActor) {
+        response.status(404).json({ message: "Actor not found" });
+        return;
+      }
+
+      response
+        .status(200)
+        .json({ message: "Actor deleted successfully", deletedActor });
+    } catch (err: any) {
+      response
+        .status(500)
+        .json({ message: "Server error", error: err.message });
+    }
+  }
+);
 
 /**
  * Responses for Users
