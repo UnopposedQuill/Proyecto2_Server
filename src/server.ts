@@ -1,8 +1,10 @@
-import mongoose, { mongo, Mongoose } from "mongoose";
+import mongoose from "mongoose";
 import express, { Request, Response } from "express";
 import cors from "cors";
+import ActorModel from "./model/actor.collection";
 import MovieModel from "./model/movie.collection";
 import dotenv from 'dotenv';
+import { error } from "console";
 
 const app = express();
 const port = 3000;
@@ -39,9 +41,15 @@ const authenticationMiddleware = (
  */
 app.get("/movies", async (request: Request, response: Response) => {
   console.log("Request for all movies received");
-  const movies = await MovieModel.find({}).lean().exec();
-  response.status(200).json(movies);
-  console.log(`Request for all movies processed. Returned ${movies.length}`);
+  // TODO: Embed actors information
+  try {
+    const movies = await MovieModel.find({}).populate("cast").exec();
+    response.status(200).json(movies);
+    console.log(`Request for all movies processed. Returned ${movies.length}`);
+  } catch (error) {
+    response.status(500).json(`Could not process the request: ${error}`);
+    console.log(`Failed request. ${error}`);
+  }
 });
 
 app.post(
@@ -67,9 +75,11 @@ app.post(
       },
       (rejectionReason) => {
         response.status(400).json({
-          message: `Failed to create new movie for ${rejectionReason}`,
+          message: `Failed to create new movie ${request.body["title"]} for ${rejectionReason}`,
         });
-        console.log(`Successfully created new movie ${request.body["title"]}`);
+        console.log(
+          `Failed to create new movie ${request.body["title"]} for ${rejectionReason}`
+        );
       }
     );
   }
@@ -110,7 +120,10 @@ app.delete(
 app.get(
   "/movies/:id",
   async (request: Request, response: Response, next: () => any) => {
-    const movie = await MovieModel.findById(request.params.id).lean().exec();
+    // TODO: Embed actors information
+    const movie = await MovieModel.findById(request.params.id)
+      .populate("cast")
+      .exec();
     response.status(200).json(movie);
   }
 );

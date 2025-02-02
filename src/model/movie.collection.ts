@@ -1,22 +1,5 @@
 import mongoose, { Schema } from "mongoose";
-
-const ActorSubSchema: Schema = new Schema({
-  id: {
-    type: mongoose.Schema.Types.ObjectId,
-    required: true,
-  },
-});
-
-const ImageSubSchema: Schema = new Schema({
-  url: {
-    type: String,
-    required: true,
-  },
-  isCover: {
-    type: Boolean,
-    required: true,
-  },
-});
+import ActorModel from "./actor.collection";
 
 const MovieSchema: Schema = new Schema({
   title: {
@@ -43,15 +26,28 @@ const MovieSchema: Schema = new Schema({
     type: Number,
     required: true,
   },
-  cast: {
-    type: [ActorSubSchema],
-  },
+  cast: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: ActorModel.modelName, // Reference to the Actor model
+    },
+  ],
   images: {
-    type: [ImageSubSchema],
+    type: [
+      {
+        url: {
+          type: String,
+          required: true,
+        },
+        isCover: {
+          type: Boolean,
+          required: true,
+        },
+      },
+    ],
   },
 });
 
-// Export the Mongoose model for Movie
+// Export the Mongoose model for Movie and Actor
 const MovieModel = mongoose.model("Movie", MovieSchema);
-
 export default MovieModel;
