@@ -4,7 +4,8 @@ import cors from "cors";
 import ActorModel from "./model/actor.collection";
 import MovieModel from "./model/movie.collection";
 import dotenv from 'dotenv';
-import { error } from "console";
+import UserModel from "./model/user.collection";
+import { generateKey, KeyObject } from "crypto";
 
 const app = express();
 const port = 3000;
@@ -23,16 +24,24 @@ app.get("/", (request: Request, response: Response, next: () => any) => {
  * @param response The response
  * @param next If the check is clear then the next handler will be called.
  */
-const authenticationMiddleware = (
+const authenticationMiddleware = async (
   request: Request,
   response: Response,
   next: () => any
 ) => {
   // TODO: Increase security
-  if (request.headers.authorization === "Basic Esteban:SomePassword") {
-    next(); // allows for next request to proceed
-  } else {
-    response.status(401).json({ message: "User authentication failed" });
+  try {
+    const authentication = request.headers.authorization;
+    const authToken = authentication?.split(' ')[1];
+
+    const authedUser = await UserModel.findOne({ authToken: authToken }).exec();
+    if (authedUser && authedUser.role === 'admin') {
+      next(); // allows for next request to proceed
+    } else {
+      response.status(401).json({ message: "User authentication failed" });
+    }
+  } catch (error) {
+    response.status(500).json({ message: "User authentication failed" });
   }
 };
 
@@ -65,7 +74,7 @@ app.get(
 
 app.post(
   "/movies",
-  //authenticationMiddleware,
+  authenticationMiddleware,
   (request: Request, response: Response, next: () => any) => {
     console.log(`Creating new movie titled: ${request.body["title"]}`);
     const newMovie = MovieModel.create({
@@ -98,7 +107,7 @@ app.post(
 
 app.delete(
   "/movies/:id",
-  //authenticationMiddleware,
+  authenticationMiddleware,
   async (request: Request, response: Response, next: () => any) => {
     try {
       const movieId = request.params.id;
@@ -130,7 +139,7 @@ app.delete(
 
 app.patch(
   "/movies/:id",
-  //authenticationMiddleware,
+  authenticationMiddleware,
   async (request: Request, response: Response, next: () => any) => {
     try {
       const movieId = request.params.id;
@@ -216,7 +225,7 @@ app.get(
 
 app.post(
   "/actors",
-  //authenticationMiddleware,
+  authenticationMiddleware,
   (request: Request, response: Response, next: () => any) => {
     console.log(`Creating new actor named: ${request.body["name"]}`);
     const newActor = ActorModel.create({
@@ -247,7 +256,7 @@ app.post(
 
 app.delete(
   "/actors/:id",
-  //authenticationMiddleware,
+  authenticationMiddleware,
   async (request: Request, response: Response, next: () => any) => {
     try {
       const actorId = request.params.id;
@@ -279,7 +288,7 @@ app.delete(
 
 app.patch(
   "/actors/:id",
-  //authenticationMiddleware,
+  authenticationMiddleware,
   async (request: Request, response: Response, next: () => any) => {
     try {
       const actorId = request.params.id;
@@ -382,6 +391,64 @@ app.get("/search", async (request: Request, response: Response) => {
  * Responses for Users
  * TODO
  */
+app.post(
+  "/register",
+  async (request: Request, response: Response) => {
+    const { name, email, password, role } = request.body;
+    // Avoid registering admin information.
+    if (role === 'admin') {
+      response.status(400).json({ message: "Invalid register information" })
+    }
+
+    // Create the new user
+    const user = UserModel.create({ name, email, password, role });
+
+    user.then(
+      (created) => {
+        response.status(201).json({ message: "Registered successfully" });
+        console.log(`Successfully created new user with the name ${name}`);
+      },
+      (rejectionReason) => {
+        response.status(400).json({
+          message: `Failed to create new user ${name}`,
+        });
+        console.log(`Failed to create new user ${name}`);
+      }
+    );
+  });
+
+app.post(
+  "/login",
+  async (request: Request, response: Response) => {
+    const { email, password } = request.body;
+
+    // Find the user in the mock database
+    const user = await UserModel.findOne({ email: email, password: password }).lean().exec();
+
+    if (user) {
+      // Store user data in the session
+      generateKey("hmac", { length: 512 }, async (error: Error | null, key: KeyObject) => {
+        if (error) {
+          response.status(500).json({ message: "Could not perform login at this moment, please try later." })
+        }
+        else {
+          const exportedKey = key.export().toString('hex');
+          const updatedUser = await UserModel.findByIdAndUpdate(user._id, { authToken: exportedKey }).exec();
+          if (updatedUser) {
+            response
+              .status(200)
+              .json({ message: "Login successful", authToken: exportedKey, role: updatedUser.role });
+          }
+          else {
+            response.status(500).json({ message: "Could not perform login at this moment, please try later." })
+          }
+        }
+      });
+    }
+    else {
+      response.status(401).json({ message: "Invalid credentials" });
+    }
+  });
 
 /**
  * Administrative Initialization and Cleanup
