@@ -311,7 +311,7 @@ app.patch(
       );
 
       if (!updatedActor) {
-        response.status(404).json({ message: "Movie not found" });
+        response.status(404).json({ message: "Actor not found" });
         return;
       }
 
@@ -449,6 +449,146 @@ app.post(
       response.status(401).json({ message: "Invalid credentials" });
     }
   });
+
+app.get("/persons", authenticationMiddleware, async (request: Request, response: Response) => {
+  console.log("Request for all users received");
+  try {
+    const users = await UserModel.find().lean().exec();
+    response.status(200).json(users);
+    console.log(
+      `Request for all users processed. Returned ${users.length} elements`
+    );
+  } catch (error) {
+    response.status(500).json(`Could not process the request: ${error}`);
+    console.log(`Failed request. ${error}`);
+  }
+});
+
+app.get(
+  "/persons/:id",
+  async (request: Request, response: Response, next: () => any) => {
+    console.log("Request for user id received");
+    const userId = request.params.id;
+
+    // Check if the ID is valid
+    if (!mongoose.Types.ObjectId.isValid(userId)) {
+      response.status(400).json({ message: "Invalid user ID" });
+      console.log(`Request for user id: ${userId} had an invalid user ID`);
+      return;
+    }
+
+    const user = await UserModel.findById(userId).lean().exec();
+    if (user) {
+      response.status(200).json(user);
+      console.log(`Request for user id: ${userId} was processed`);
+    } else {
+      response.status(404).json({ message: "User ID was not found" });
+      console.log(`Request for user id: ${userId} did not yield any results`);
+    }
+  }
+);
+
+app.post(
+  "/persons",
+  authenticationMiddleware,
+  (request: Request, response: Response, next: () => any) => {
+    const { name, email, password, role } = request.body;
+    console.log(`Creating new user named: ${name}`);
+    const newActor = UserModel.create({
+      name: name,
+      email: email,
+      password: password,
+      role: role,
+    });
+
+    newActor.then(
+      (created) => {
+        response.status(201).json(created);
+        console.log(
+          `Successfully created new user with the name ${name}`
+        );
+      },
+      (rejectionReason) => {
+        response.status(400).json({
+          message: `Failed to create new movie ${name} for ${rejectionReason}`,
+        });
+        console.log(
+          `Failed to create new movie ${name} for ${rejectionReason}`
+        );
+      }
+    );
+  }
+);
+
+app.delete(
+  "/persons/:id",
+  authenticationMiddleware,
+  async (request: Request, response: Response, next: () => any) => {
+    try {
+      const userId = request.params.id;
+
+      // Check if the ID is valid
+      if (!mongoose.Types.ObjectId.isValid(userId)) {
+        response.status(400).json({ message: "Invalid user ID" });
+        return;
+      }
+
+      // Find and delete the actor
+      const deletedUser = await UserModel.findByIdAndDelete(userId);
+
+      if (!deletedUser) {
+        response.status(404).json({ message: "User not found" });
+        return;
+      }
+
+      response
+        .status(200)
+        .json({ message: "User deleted successfully", deletedUser });
+    } catch (err: any) {
+      response
+        .status(500)
+        .json({ message: "Server error", error: err.message });
+    }
+  }
+);
+
+app.patch(
+  "/persons/:id",
+  authenticationMiddleware,
+  async (request: Request, response: Response, next: () => any) => {
+    try {
+      const userId = request.params.id;
+      const updates = request.body; // Partial updates from the request body
+
+      // Check if the ID is valid
+      if (!mongoose.Types.ObjectId.isValid(userId)) {
+        response.status(400).json({ message: "Invalid user ID" });
+        return;
+      }
+
+      // Find the movie by ID and apply the updates
+      const updatedUser = await UserModel.findByIdAndUpdate(
+        userId,
+        updates,
+        {
+          new: true, // Return the updated document
+          runValidators: true, // Run schema validators on the update
+        }
+      );
+
+      if (!updatedUser) {
+        response.status(404).json({ message: "User not found" });
+        return;
+      }
+
+      response.status(200).json(updatedUser);
+    } catch (err: any) {
+      response
+        .status(500)
+        .json({ message: "Server error", error: err.message });
+    }
+  }
+);
 
 /**
  * Administrative Initialization and Cleanup
