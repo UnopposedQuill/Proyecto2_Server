@@ -339,8 +339,13 @@ app.get("/search", async (request: Request, response: Response) => {
       if (selectedGenre) filter.genre = selectedGenre;
       const selectedYear = request.query?.selectedYear;
       if (selectedYear) filter.releaseYear = selectedYear;
-      const selectedRating = request.query?.selectedRating;
-      if (selectedRating) filter.rating = selectedRating;
+
+      const selectedLowRating = request.query?.selectedLowRating;
+      const selectedHighRating = request.query?.selectedHighRating;
+      if (selectedLowRating && selectedLowRating)
+        filter.rating = { $gte: selectedLowRating, $lte: selectedHighRating };
+      else if (selectedLowRating) filter.rating = { $gte: selectedLowRating };
+      else if (selectedHighRating) filter.rating = { $lte: selectedHighRating };
 
       const movies = await MovieModel.find(filter).lean().exec();
       response.status(200).json(movies);
