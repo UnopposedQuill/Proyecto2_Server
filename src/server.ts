@@ -183,7 +183,6 @@ app.get("/actors", async (request: Request, response: Response) => {
   }
 });
 
-// TODO: Add Movies information
 app.get(
   "/actors/:id",
   async (request: Request, response: Response, next: () => any) => {
@@ -315,6 +314,63 @@ app.patch(
     }
   }
 );
+
+/**
+ * Responses for Searches
+ */
+app.get("/search", async (request: Request, response: Response) => {
+  console.log("Search request received");
+  try {
+    const searchType = request.query.searchType;
+    if (!searchType && searchType !== "movies" && searchType !== "actors") {
+      response
+        .status(400)
+        .json({ message: `Invalid Search type ${searchType}` });
+      console.log(`Invalid Search type ${searchType}`);
+      return;
+    }
+
+    if (searchType === "movies") {
+      // Filter will be built dynamically using the request params
+      const filter: any = {};
+      const searchQuery = request.query?.searchQuery;
+      if (searchQuery) filter.title = { $regex: searchQuery, $options: "i" };
+      const selectedGenre = request.query?.selectedGenre;
+      if (selectedGenre) filter.genre = selectedGenre;
+      const selectedYear = request.query?.selectedYear;
+      if (selectedYear) filter.releaseYear = selectedYear;
+      const selectedRating = request.query?.selectedRating;
+      if (selectedRating) filter.rating = selectedRating;
+
+      const movies = await MovieModel.find(filter).lean().exec();
+      response.status(200).json(movies);
+      console.log(
+        `Movies search sequest processed. Returned ${movies.length} elements`
+      );
+    } else {
+      // Filter will be built dynamically using the request params
+      const filter: any = {};
+      const searchQuery = request.query?.searchQuery;
+      if (searchQuery) filter.name = { $regex: searchQuery, $options: "i" };
+
+      const startDate = request.query?.startDate;
+      const endDate = request.query?.endDate;
+      if (startDate && endDate)
+        filter.dateOfBirth = { $gte: startDate, $lte: endDate };
+      else if (startDate) filter.dateOfBirth = { $gte: startDate };
+      else if (endDate) filter.dateOfBirth = { $lte: endDate };
+
+      const actors = await ActorModel.find(filter).lean().exec();
+      response.status(200).json(actors);
+      console.log(
+        `Actors search request processed. Returned ${actors.length} elements`
+      );
+    }
+  } catch (error) {
+    response.status(500).json(`Could not process the request: ${error}`);
+    console.log(`Failed request. ${error}`);
+  }
+});
 
 /**
  * Responses for Users
