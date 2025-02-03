@@ -336,7 +336,8 @@ app.get("/search", async (request: Request, response: Response) => {
       const searchQuery = request.query?.searchQuery;
       if (searchQuery) filter.title = { $regex: searchQuery, $options: "i" };
       const selectedGenre = request.query?.selectedGenre;
-      if (selectedGenre) filter.genre = selectedGenre;
+      if (selectedGenre)
+        filter.genre = { $regex: selectedGenre, $options: "i" };
       const selectedYear = request.query?.selectedYear;
       if (selectedYear) filter.releaseYear = selectedYear;
 
