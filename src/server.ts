@@ -36,7 +36,7 @@ const authenticationMiddleware = async (
 
     const authedUser = await UserModel.findOne({ authToken: authToken }).exec();
     if (authedUser && authedUser.role === 'admin') {
-      next(); // allows for next request to proceed
+      next(); // allows for next handler to proceed
     } else {
       response.status(401).json({ message: "User authentication failed" });
     }
