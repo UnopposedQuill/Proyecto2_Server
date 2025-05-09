@@ -2,6 +2,7 @@ import mongoose, { mongo, Mongoose } from "mongoose";
 import express, { Request, Response } from "express";
 import cors from "cors";
 import MovieModel from "./model/movie.collection";
+import dotenv from 'dotenv';
 
 const app = express();
 const port = 3000;
@@ -9,13 +10,6 @@ const port = 3000;
 app.use(express.json());
 // Allow cors usages from these hosts and ports.
 app.use(cors({ origin: "http://localhost:4200" }));
-
-/**
- * Mongoose Setup
- */
-const connectionString: string =
-  "mongodb+srv://SomeUser:SomePassword@SomeServer";
-// const model = mongoose.model();
 
 app.get("/", (request: Request, response: Response, next: () => any) => {
   response.status(200).json({ message: "Server ping response" });
@@ -79,7 +73,9 @@ app.get("/actors", (request: Request, response: Response, next: () => any) => {
  */
 
 const main = async () => {
-  await mongoose.connect(connectionString);
+  dotenv.config();
+  const { CONNECTION_STRING } = process.env;
+  await mongoose.connect(CONNECTION_STRING!);
   app.listen(port, () => {
     console.log(`Server listening on port ${port}`);
   });
